@@ -3043,9 +3043,9 @@ th.ant-table-cell{
 .loadingio-spinner-spinner-hd458l8xbrs {
   width: 200px;
   height: 200px;
-  display: inline-block;
+  display: block;
   overflow: hidden;
-
+  margin: auto;
 }
 .ldio-engoxtquu0e {
   width: 100%;
