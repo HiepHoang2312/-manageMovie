@@ -30,7 +30,17 @@ const MovieItem = () => {
   };
 
   async function handleRemoveMovie(idMovie: number) {
-    await dispatch(removeFilm(idMovie));
+    await dispatch(removeFilm(idMovie))
+      .unwrap()
+      .then((originalPromiseResult) => {
+        if (originalPromiseResult) {
+          console.log(originalPromiseResult);
+          Swal.fire({
+            title: `Xóa Thành công`,
+          });
+          dispatch(getMovieShowing());
+        }
+      });
   }
   const [filmUpdate, setFilmUpdate] = useState<Movie>();
   const [typeAction, setTypeAction] = useState("update");

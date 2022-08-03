@@ -16,6 +16,7 @@ const ClusterCinema = lazy(() => import("Pages/ClusterCinema/ClusterCinema"));
 const ListRap = lazy(() => import("Pages/ListRap/ListRap"));
 const AddUser = lazy(() => import("Pages/AddUser/AddUser"));
 const UserInfo = lazy(() => import("Pages/UserInfo/UserInfo"));
+
 function App() {
   return (
     <Suspense
